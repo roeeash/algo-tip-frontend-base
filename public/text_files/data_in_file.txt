@@ -1,1 +1,1 @@
-The algorithm made the following predictions: ['Genoa - Venezia: over 2.5 (Low Risk)', 'Crystal Palace - Manchester United: over 2.5 (Low Risk)']
+The algorithm made the following predictions: ['Athletic Club - Espanyol: under 2.5 (High Risk)', 'AC Milan - Inter: over 2.5 (High Risk)', 'Crystal Palace - Manchester United: over 2.5 (Low Risk)', 'Levante - Atletico Madrid: over 2.5 (Low Risk)', 'Real Betis - Osasuna: over 2.5 (Low Risk)']

@@ -61,7 +61,7 @@ return (
 <h1>Sports Predictions</h1>
 {predictions.length === 0 ? <p>Loading...</p> : predictions.map((prediction, index) => (
 <div key={index}>
-<p>{prediction}</p>
+<p><h3>{prediction}</h3></p>
 </div>
 ))}
 </div>
