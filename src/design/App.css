@@ -1,0 +1,40 @@
+/* Titles */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 3rem; /* This will make the height of all h1 elements 3rem */
+  margin: 2rem 0; /* Adding some margin to the top and bottom of the title */
+}
+
+/* h3 Titles */
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  margin: 1rem 0; /* Adding some margin to the top and bottom of the title */
+}
+
+.footContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Setting the minimum height of the container to the full viewport height */
+}
+
+/* Main Section */
+main {
+  padding: 2rem; /* Adding some padding to the main section */
+  flex-grow: 1; /* This will make the main container take up all remaining space */
+}
+
+/* Footer */
+footer {
+  background-color: #333; /* Changing the background color of the footer */
+  color: #fff; /* Changing the text color of the footer */
+  text-align: center; /* Centering the text in the footer */
+  padding: 1rem; /* Adding some padding to the footer */
+  position: absolute; /* This will make the footer stay in the same position at the bottom */
+  width: 100%; /* This will make the footer take up the full width of the parent container */
+  bottom: 0; /* This will make the footer align to the bottom of the parent container */
+  left: 0; /* This will make the footer align to the left of the parent container */
+}

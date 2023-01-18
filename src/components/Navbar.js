@@ -1,4 +1,5 @@
 import React from 'react';
+import '../design/Navbar.css'
 
 function Navbar() {
     console.log(window.location)

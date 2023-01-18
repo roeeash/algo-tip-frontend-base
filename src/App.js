@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import {Navbar,About, Contact } from './components';
-
 import axios from 'axios';
+import './design/App.css';
+
 let isHome = false;
 
 let component 
@@ -49,16 +50,20 @@ return (
   {component}
 </>
 
-
-
-</header>
-
-<main>
 <div style ={{
           display: (isHome ? 'block' : 'none') 
         }}
   >
 <h1>Sports Predictions</h1>
+</div>
+
+</header>
+<body>
+<main>
+<div style ={{
+          display: (isHome ? 'block' : 'none') 
+        }}
+  >
 {predictions.length === 0 ? <p>Loading...</p> : predictions.map((prediction, index) => (
 <div key={index}>
 <p><h3>{prediction}</h3></p>
@@ -67,9 +72,12 @@ return (
 </div>
 
 </main>
+</body>
+<div className='footContainer'>
 <footer>
 <p>Copyright © 2023 Algo-Tip</p>
 </footer>
+</div>
 </div>
 );
 };
