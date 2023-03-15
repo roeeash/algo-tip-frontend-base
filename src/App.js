@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Navbar,About, Contact } from './components';
+import {Navbar,About, Contact, PastPredictions } from './components';
 import axios from 'axios';
 import './design/App.css';
 
@@ -19,6 +19,11 @@ let component
     case "/contact":
       isHome = false;
       component = <Contact/>
+      break;
+
+    case "/past_predictions":
+      isHome = false;
+      component = <PastPredictions/>
       break;
 
     default:

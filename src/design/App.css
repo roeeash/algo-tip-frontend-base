@@ -1,18 +1,44 @@
 /* Titles */
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   text-align: center;
-  line-height: 3rem; /* This will make the height of all h1 elements 3rem */
-  margin: 2rem 0; /* Adding some margin to the top and bottom of the title */
+  line-height: 4rem;
+  margin: 2rem 0;
+  mix-blend-mode: screen;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px #333, -1px -1px 2px #333, 1px -1px 2px #333, -1px 1px 2px #333;
+  position: relative;
+}
+
+h1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: -1;
 }
 
 /* h3 Titles */
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem; /* Increase the font size for better visibility */
   font-weight: bold;
   text-align: left;
   margin: 1rem 0; /* Adding some margin to the top and bottom of the title */
+  mix-blend-mode: screen; /* This will make the text blend with the background image */
+  text-shadow: 1px 1px 2px #333, -1px -1px 2px #333, 1px -1px 2px #333, -1px 1px 2px #333; /* Adding some text shadow for better visibility */
+  opacity: 0.9;
+}
+
+body{
+  background-image:url("../../public/images/background.png");/* The image used */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-color: #fff; /* Adding a solid background color */
 }
 
 .footContainer {
@@ -20,11 +46,29 @@ h3 {
   flex-direction: column;
   min-height: 100vh; /* Setting the minimum height of the container to the full viewport height */
 }
-
 /* Main Section */
 main {
   padding: 2rem; /* Adding some padding to the main section */
   flex-grow: 1; /* This will make the main container take up all remaining space */
+  background-image:url("../../public/images/main_section_background.png");/* The image used */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  opacity: 1; /* This will reduce the opacity of the background image */
+  position: relative;
+}
+
+main .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the content within the main section */
+  opacity: 1;
+}
+
+main .content, body {
+  color: #fff; /* Change the text color for better visibility */
+  text-align: center;
 }
 
 /* Footer */
@@ -32,7 +76,7 @@ footer {
   background-color: #333; /* Changing the background color of the footer */
   color: #fff; /* Changing the text color of the footer */
   text-align: center; /* Centering the text in the footer */
-  padding: 1rem; /* Adding some padding to the footer */
+  padding: 2rem; /* Increase the padding for better visibility */
   position: absolute; /* This will make the footer stay in the same position at the bottom */
   width: 100%; /* This will make the footer take up the full width of the parent container */
   bottom: 0; /* This will make the footer align to the bottom of the parent container */
