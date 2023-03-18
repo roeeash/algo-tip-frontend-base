@@ -24,6 +24,7 @@ fetchData();
               display: (isPastPredicitons ? 'block' : 'none') 
             }}
       >
+        
     <h1>Past Predictions</h1>
     </div>
     

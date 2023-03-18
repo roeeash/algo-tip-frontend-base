@@ -49,7 +49,6 @@ return (
 <div>
 <header>
 
-  
 <>
 <Navbar/>
   {component}
