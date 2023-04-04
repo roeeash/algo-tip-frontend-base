@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 /* Titles */
 h1 {
   font-size: 3rem;
@@ -41,15 +45,9 @@ body{
   background-color: #fff; /* Adding a solid background color */
 }
 
-.footContainer {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Setting the minimum height of the container to the full viewport height */
-}
 /* Main Section */
 main {
-  padding: 2rem; /* Adding some padding to the main section */
-  flex-grow: 1; /* This will make the main container take up all remaining space */
+  height: calc(100vh - 80px); /* Set the height of the main container to the viewport height minus the height of the footer container */
   background-image:url("../../public/images/main_section_background.png");/* The image used */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -71,14 +69,159 @@ main .content, body {
   text-align: center;
 }
 
-/* Footer */
 footer {
+  position: static;
   background-color: #333; /* Changing the background color of the footer */
   color: #fff; /* Changing the text color of the footer */
   text-align: center; /* Centering the text in the footer */
-  padding: 2rem; /* Increase the padding for better visibility */
-  position: absolute; /* This will make the footer stay in the same position at the bottom */
+  padding: 3rem; /* Increase the padding for better visibility */
+  position: fixed; /* This will make the footer stay in the same position at the bottom */
   width: 100%; /* This will make the footer take up the full width of the parent container */
   bottom: 0; /* This will make the footer align to the bottom of the parent container */
   left: 0; /* This will make the footer align to the left of the parent container */
+  z-index: 999; /* Ensure that the footer appears on top of all other content */
 }
+
+.footContainer {
+  display: flex;
+  height: 80px; /* Set the height of the footer container */
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+  color: #fff;
+  position: relative;
+  z-index: 1; /* Set the z-index of the footer container to 1 to ensure it appears on top of the main container */
+}
+
+/* Styles for medium screens */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+  
+  h1:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+    z-index: -1;
+  }
+  
+  h3 {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+    font-weight: bold;
+    text-align: left;
+    mix-blend-mode: screen; /* This will make the text blend with the background image */
+    text-shadow: 1px 1px 2px #333, -1px -1px 2px #333, 1px -1px 2px #333, -1px 1px 2px #333; /* Adding some text shadow for better visibility */
+    opacity: 0.9;
+  }
+  
+  main {
+    padding: 2rem;
+    opacity: 0.9;
+    flex-grow: 1; /* This will make the main container take up all remaining space */
+    background-image: url("../../public/images/main_section_background.png");/* The image used */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    opacity: 1; /* This will reduce the opacity of the background image */
+    position: relative;
+    min-height: calc(100vh - 3rem); /* Set the minimum height to the full screen height minus the height of the footer */
+  }
+  
+  footer {
+    position: static;
+    background-color: #333; /* Changing the background color of the footer */
+    color: #fff; /* Changing the text color of the footer */
+    text-align: center; /* Centering the text in the footer */
+    padding: 3rem; /* Increase the padding for better visibility */
+    position: fixed; /* This will make the footer stay in the same position at the bottom */
+    width: 100%; /* This will make the footer take up the full width of the parent container */
+    bottom: 0; /* This will make the footer align to the bottom of the parent container */
+    left: 0; /* This will make the footer align to the left of the parent container */
+    z-index: 999; /* Ensure that the footer appears on top of all other content */
+  }
+  
+  .footContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Setting the minimum height of the container to the full viewport height */
+  }
+}
+
+/* Styles for small screens */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    margin: 1rem 0;
+    text-shadow: none;
+  }
+  
+  main {
+    padding: 1rem;
+    background-size: contain; /* Resize the background image to fit within the container */
+    min-height: calc(100vh - 1rem); 
+    opacity: 0.9;
+    flex-grow: 1; /* This will make the main container take up all remaining space */
+    background-image: url("../../public/images/main_section_background.png");/* The image used */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    opacity: 1; /* This will reduce the opacity of the background image */
+    position: relative;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    font-weight: bold;
+    text-align: left;
+    mix-blend-mode: screen; /* This will make the text blend with the background image /
+    text-shadow: 1px 1px 2px #333, -1px -1px 2px #333, 1px -1px 2px #333, -1px 1px 2px #333; / Adding some text shadow for better visibility */
+    opacity: 0.9;
+    }
+    
+    main {
+    padding: 1.5rem;
+    opacity: 0.9;
+    flex-grow: 1; /* This will make the main container take up all remaining space /
+    background-image: url("../../public/images/main_section_background.png");/ The image used /
+    background-position: center; / Center the image /
+    background-repeat: no-repeat; / Do not repeat the image /
+    background-size: cover; / Resize the background image to cover the entire container /
+    opacity: 1; / This will reduce the opacity of the background image /
+    position: relative;
+    height: calc(100vh - 3rem); / Set the height to the full screen height minus the height of the footer */
+    }
+    
+    footer {
+    position: static;
+    width: auto;
+    bottom: auto;
+    left: auto;
+    background-color: #333; /* Changing the background color of the footer */
+    color: #fff; /* Changing the text color of the footer */
+    text-align: center; /* Centering the text in the footer */
+    padding: 2rem; /* Increase the padding for better visibility */
+    position: absolute; /* This will make the footer stay in the same position at the bottom */
+    width: 100%; /* This will make the footer take up the full width of the parent container */
+    bottom: 0; /* This will make the footer align to the bottom of the parent container */
+    left: 0; /* This will make the footer align to the left of the parent container */
+    }
+    
+    .footContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Setting the minimum height of the container to the full viewport height */
+    }
+  }
+  
